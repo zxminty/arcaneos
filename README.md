@@ -1,7 +1,8 @@
 # arcaneos
 arcane os was built by @notzxminty this project is opensource all operations done to the operating system before published are documented below
-based on ubuntu 25.04-gnome 48
+based on ubuntu 25.04-gnome 47+ also works with debian 13-gnome 47+
 -------------------------------------------------------------------------------------------------------------------------------------------------
+# install for debian/ubuntu
 # install chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/chrome.deb
 sudo dpkg -i /tmp/chrome.deb
