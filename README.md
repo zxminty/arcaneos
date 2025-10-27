@@ -4,10 +4,11 @@ arcane os was built by @notzxminty this project is opensource all operations don
 based on ubuntu-gnome 47+ also works with debian 13-gnome 47+
 -------------------------------------------------------------------------------------------------------------------------------------------------
 # install for debian/ubuntu
-# install chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/chrome.deb
-sudo dpkg -i /tmp/chrome.deb
-sudo apt -f install -y
+# install Zen Browser
+wget https://github.com/zen-browser/desktop/releases/latest/download/zen-linux.tar.xz -O /tmp/zen.tar.xz
+sudo mkdir -p /opt/zen
+sudo tar -xf /tmp/zen.tar.xz -C /opt/zen --strip-components=1
+sudo ln -sf /opt/zen/zen-browser /usr/local/bin/zen-browser
 
 # remove snapd
 sudo apt purge snapd -y
@@ -40,19 +41,26 @@ cd ..
 # set GTK theme and icons
 gsettings set org.gnome.desktop.interface gtk-theme "Orchis-dark-grey"
 gsettings set org.gnome.desktop.interface icon-theme "WhiteSur"
+
+# install gnome extensions
+gnome-extensions install blur-my-shell@auntex.github.com && gnome-extensions enable blur-my-shell@auntex.github.com
+gnome-extensions install bluetooth-battery@maniacx.github.com && gnome-extensions enable bluetooth-battery@maniacx.github.com
+gnome-extensions install user-avatar@gnome-shell-extension.github.com && gnome-extensions enable user-avatar@gnome-shell-extension.github.com
+gnome-extensions install places-menu@gnome-shell-extension.github.com && gnome-extensions enable places-menu@gnome-shell-extension.github.com
+gnome-extensions install apps-menu@gnome-shell-extension.github.com && gnome-extensions enable apps-menu@gnome-shell-extension.github.com
+gnome-extensions install system-monitor@gnome-shell-extension.github.com && gnome-extensions enable system-monitor@gnome-shell-extension.github.com
 -------------------------------------------------------------------------------------------------------------------------------------------------
 # arcaneos
 arcane os was built by @notzxminty this project is opensource all operations done to the operating system before published are documented below
 based on fedora-gnome 47+ also works with rhel-gnome 47+
 -------------------------------------------------------------------------------------------------------------------------------------------------
 # install for fedora/rhel
-# install google chrome
-# Add the Google Chrome repository
-sudo dnf config-manager --set-enabled google-chrome
-sudo dnf install google-chrome-stable -y
+# install zen browser
+flatpak install flathub io.github.zen_browser.zen -y
 
-# remove snapd (if installed, Fedora doesn't typically come with it by default)
+# uninstall for snapd
 sudo dnf remove snapd -y
+sudo rm -rf /var/cache/snapd /snap /var/snap /var/lib/snapd ~/snap
 
 # install flatpak and flathub
 # flatpak is usually installed by default on Fedora, but we ensure it and add Flathub.
@@ -86,6 +94,14 @@ rm -rf Orchis-theme # Clean up the directory
 # set GTK theme and icons
 gsettings set org.gnome.desktop.interface gtk-theme "Orchis-dark-grey"
 gsettings set org.gnome.desktop.interface icon-theme "WhiteSur"
+
+# install gnome extensions
+gnome-extensions install blur-my-shell@auntex.github.com && gnome-extensions enable blur-my-shell@auntex.github.com
+gnome-extensions install bluetooth-battery@maniacx.github.com && gnome-extensions enable bluetooth-battery@maniacx.github.com
+gnome-extensions install user-avatar@gnome-shell-extension.github.com && gnome-extensions enable user-avatar@gnome-shell-extension.github.com
+gnome-extensions install places-menu@gnome-shell-extension.github.com && gnome-extensions enable places-menu@gnome-shell-extension.github.com
+gnome-extensions install apps-menu@gnome-shell-extension.github.com && gnome-extensions enable apps-menu@gnome-shell-extension.github.com
+gnome-extensions install system-monitor@gnome-shell-extension.github.com && gnome-extensions enable system-monitor@gnome-shell-extension.github.com
 -------------------------------------------------------------------------------------------------------------------------------------------------
 made by @zxmintyofficial this project is opensource
 -------------------------------------------------------------------------------------------------------------------------------------------------
