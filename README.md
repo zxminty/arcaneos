@@ -4,12 +4,6 @@ arcane os was built by @notzxminty this project is opensource all operations don
 based on ubuntu-gnome 47+ also works with debian 13-gnome 47+
 -------------------------------------------------------------------------------------------------------------------------------------------------
 # install for debian/ubuntu
-# install Zen Browser
-wget https://github.com/zen-browser/desktop/releases/latest/download/zen-linux.tar.xz -O /tmp/zen.tar.xz
-sudo mkdir -p /opt/zen
-sudo tar -xf /tmp/zen.tar.xz -C /opt/zen --strip-components=1
-sudo ln -sf /opt/zen/zen-browser /usr/local/bin/zen-browser
-
 # remove snapd
 sudo apt purge snapd -y
 sudo rm -rf /var/cache/snapd/ /snap /var/snap /var/lib/snapd ~/snap
@@ -24,6 +18,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 flatpak install flathub org.gnome.Tweaks -y
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 flatpak install flathub io.github.realmazharhussain.GdmSettings -y
+flatpak install flathub io.github.zen_browser.zen -y
 flatpak update -y
 
 # install WhiteSur icons
