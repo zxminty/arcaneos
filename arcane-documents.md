@@ -88,3 +88,4 @@ gsettings set org.gnome.desktop.interface gtk-theme "Orchis-dark-grey"
 gsettings set org.gnome.desktop.interface icon-theme "WhiteSur"
 -------------------------------------------------------------------------------------------------------------------------------------------------
 made by @zxmintyofficial this project is opensource
+-------------------------------------------------------------------------------------------------------------------------------------------------
