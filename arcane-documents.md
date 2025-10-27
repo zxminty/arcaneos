@@ -10,6 +10,12 @@ sudo rm -rf /var/cache/snapd/ /snap /var/snap /var/lib/snapd ~/snap
 sudo apt autoremove --purge -y
 sudo apt update
 
+# install git
+sudo apt install git -y
+
+# install curl
+sudo apt install curl -y
+
 # install flatpak and flathub
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
