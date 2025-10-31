@@ -19,14 +19,6 @@ cd ..
 rm -rf WhiteSur-icon-theme
 git clone https://github.com/vinceliuice/Orchis-theme.git
 cd Orchis-theme
-sudo ./install.sh -c grey
+sudo ./install.sh -t grey
 cd ..
 rm -rf Orchis-theme
-gsettings set org.gnome.desktop.interface gtk-theme "Orchis-dark-grey"
-gsettings set org.gnome.desktop.interface icon-theme "WhiteSur"
-gnome-extensions install blur-my-shell@auntex.github.com && gnome-extensions enable blur-my-shell@auntex.github.com
-gnome-extensions install bluetooth-battery@maniacx.github.com && gnome-extensions enable bluetooth-battery@maniacx.github.com
-gnome-extensions install user-avatar@gnome-shell-extension.github.com && gnome-extensions enable user-avatar@gnome-shell-extension.github.com
-gnome-extensions install places-menu@gnome-shell-extension.github.com && gnome-extensions enable places-menu@gnome-shell-extension.github.com
-gnome-extensions install apps-menu@gnome-shell-extension.github.com && gnome-extensions enable apps-menu@gnome-shell-extension.github.com
-gnome-extensions install system-monitor@gnome-shell-extension.github.com && gnome-extensions enable system-monitor@gnome-shell-extension.github.com
